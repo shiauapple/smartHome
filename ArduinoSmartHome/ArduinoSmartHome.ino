@@ -12,7 +12,7 @@ void loop()
     Serial.println("alert");
     digitalWrite(12, HIGH);
     digitalWrite(11, LOW);
-    tone(7, 1000, 500);
+    tone(7, 2500, 500);
     delay(500);
     digitalWrite(12, LOW);
     digitalWrite(11, HIGH);
