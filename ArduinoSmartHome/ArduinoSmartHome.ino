@@ -8,21 +8,26 @@ void setup()
 }
 void loop()
 {
-  if(digitalRead(2)==HIGH) {
-    Serial.println("alert");
+  if(digitalRead(2)==LOW) {
+    //Serial.println("alert");
+    Serial.println("normal");
     digitalWrite(12, HIGH);
     digitalWrite(11, LOW);
-    tone(7, 2500, 500);
-    delay(500);
+    tone(7, 3000, 500);
+    delay(150);
     digitalWrite(12, LOW);
     digitalWrite(11, HIGH);
-    tone(7, 800, 500);
-    delay(500);
+    tone(7, 1000, 500);
+    delay(1600);
   }
   else {
-    Serial.println("normal");
-    digitalWrite(12, LOW);
-    digitalWrite(11, LOW);
+    //Serial.println("normal");
+    Serial.println("alert");
+    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
+    //digitalWrite(12, LOW);
+    //digitalWrite(11, LOW);
+    tone(7, 3000, 50000);
     delay(1000);
   }
 }
